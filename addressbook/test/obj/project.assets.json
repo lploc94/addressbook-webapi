@@ -9701,10 +9701,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\users\\thorn\\documents\\visual studio 2017\\Projects\\test\\test\\test.csproj",
+      "projectUniqueName": "C:\\Users\\thorn\\Documents\\GitHub\\addressbook-webapi\\addressbook\\test\\test.csproj",
       "projectName": "test",
-      "projectPath": "c:\\users\\thorn\\documents\\visual studio 2017\\Projects\\test\\test\\test.csproj",
-      "outputPath": "c:\\users\\thorn\\documents\\visual studio 2017\\Projects\\test\\test\\obj\\",
+      "projectPath": "C:\\Users\\thorn\\Documents\\GitHub\\addressbook-webapi\\addressbook\\test\\test.csproj",
+      "outputPath": "C:\\Users\\thorn\\Documents\\GitHub\\addressbook-webapi\\addressbook\\test\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

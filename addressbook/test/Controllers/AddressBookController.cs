@@ -17,9 +17,14 @@ namespace test.Controllers
             return new JsonResult(AddressesDataStore.current.LAddesses);
         }
         [HttpGet("{id}")]
-        public JsonResult getAddress(int id)
+        public IActionResult getAddress(int id)
         {
-            return new JsonResult(AddressesDataStore.current.LAddesses.FirstOrDefault(c => c.iID == id));
+            var rtn= AddressesDataStore.current.LAddesses.FirstOrDefault(c => c.iID == id);
+            if (rtn == null)
+            {
+                return NotFound();
+            }
+            return Ok(rtn);
         }
         //// GET api/values/5
         //[HttpGet("{id}")]

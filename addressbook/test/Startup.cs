@@ -36,7 +36,7 @@ namespace test
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
+            app.UseStatusCodePages();
             app.UseMvc();
         }
     }
