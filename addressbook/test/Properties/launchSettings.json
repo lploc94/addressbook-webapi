@@ -11,7 +11,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/addressbook",
+      "launchUrl": "api/addressbook/1",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -19,7 +19,7 @@
     "test": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/addressbook",
+      "launchUrl": "api/addressbook/1",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
