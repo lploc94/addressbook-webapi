@@ -96,7 +96,7 @@ namespace test.Controllers
             return NoContent();
         }
 
-        [HttpDelete("[{id}")]
+        [HttpDelete("{id}")]
         public IActionResult deleteAddress(int id)
         {
             var vAddress = AddressesDataStore.current.LAddesses.FirstOrDefault(p => p.iID == id);
