@@ -14,7 +14,7 @@ namespace test.Controllers
     {
         // GET api/values
         [HttpGet]
-        public JsonResult getAll()
+        public JsonResult index()
         {
             return new JsonResult(AddressesDataStore.current.LAddesses);
         }

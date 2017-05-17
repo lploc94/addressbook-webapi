@@ -31,6 +31,7 @@ namespace test
             services.AddMvc()
                 .AddMvcOptions(o=>o.OutputFormatters.Add(
                     new XmlDataContractSerializerOutputFormatter()));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +41,8 @@ namespace test
             loggerFactory.AddDebug();
             app.UseStatusCodePages();
             app.UseMvc();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
         }
     }
 }
