@@ -70,32 +70,32 @@ namespace test.Controllers
         //public void Delete(int id)
         //{
         //}
-
-        [HttpPatch("{id}")]
-        public IActionResult updateAddress(int id, [FromBody]JsonPatchDocument<AddressInputDTO> patch)
-        {
-            if (patch == null)
-                return BadRequest();
-            var vAddress = AddressesDataStore.current.LAddesses.FirstOrDefault(p => p.iID == id);
-            if (vAddress == null)
-                return NotFound();
-            var rtnAddress = new AddressInputDTO()
-            {
-                sName = vAddress.sName,
-                sPhoneNumber = vAddress.sPhoneNumber,
-                sAddress=vAddress.sAddress,
-                sMoreInfo=vAddress.sMoreInfo
-            };
-            patch.ApplyTo(rtnAddress, ModelState);
-            if (!ModelState.IsValid)
-                return BadRequest();
-            vAddress.sName = rtnAddress.sName;
-            vAddress.sPhoneNumber = rtnAddress.sPhoneNumber;
-            vAddress.sAddress = rtnAddress.sAddress;
-            vAddress.sMoreInfo = rtnAddress.sMoreInfo;
-            return NoContent();
-        }
-
+        //-------------------------
+        //[HttpPatch("{id}")]
+        //public IActionResult updateAddress(int id, [FromBody]JsonPatchDocument<AddressInputDTO> patch)
+        //{
+        //    if (patch == null)
+        //        return BadRequest();
+        //    var vAddress = AddressesDataStore.current.LAddesses.FirstOrDefault(p => p.iID == id);
+        //    if (vAddress == null)
+        //        return NotFound();
+        //    var rtnAddress = new AddressInputDTO()
+        //    {
+        //        sName = vAddress.sName,
+        //        sPhoneNumber = vAddress.sPhoneNumber,
+        //        sAddress=vAddress.sAddress,
+        //        sMoreInfo=vAddress.sMoreInfo
+        //    };
+        //    patch.ApplyTo(rtnAddress, ModelState);
+        //    if (!ModelState.IsValid)
+        //        return BadRequest();
+        //    vAddress.sName = rtnAddress.sName;
+        //    vAddress.sPhoneNumber = rtnAddress.sPhoneNumber;
+        //    vAddress.sAddress = rtnAddress.sAddress;
+        //    vAddress.sMoreInfo = rtnAddress.sMoreInfo;
+        //    return NoContent();
+        //}
+        //-----------------------------
         [HttpDelete("{id}")]
         public IActionResult deleteAddress(int id)
         {
