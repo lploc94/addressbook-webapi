@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.AspNetCore.Http;
+
 namespace test
 {
     public class Startup
@@ -28,9 +30,11 @@ namespace test
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.AddAuthorization();
             services.AddMvc()
                 .AddMvcOptions(o=>o.OutputFormatters.Add(
                     new XmlDataContractSerializerOutputFormatter()));
+
             
         }
 
@@ -43,6 +47,14 @@ namespace test
             app.UseMvc();
             app.UseDefaultFiles();
             app.UseStaticFiles();
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            {
+                AuthenticationScheme = "Cookie",
+                LoginPath = new PathString("/login/"),
+                AccessDeniedPath = new PathString("/forbidden/"),
+                AutomaticAuthenticate = true,
+                AutomaticChallenge = true
+            });
         }
     }
 }
