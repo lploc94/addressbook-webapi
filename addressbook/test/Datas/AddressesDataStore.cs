@@ -17,7 +17,7 @@ namespace test.Datas
                 new AddressDTO()
                 {
                     iID=1,
-                    sName="Kim Jong Un",
+                    sName="Un in un in",
                     sPhoneNumber="+850-166-666-6666",
                     sAddress="Triều Tiên",
                     sMoreInfo="Mập, tóc 2 mái, thích chơi tên lửa"
@@ -33,7 +33,7 @@ namespace test.Datas
                 new AddressDTO()
                 {
                     iID=3,
-                    sName="Hồ Cẩm Đào",
+                    sName="Một Người Bạn",
                     sPhoneNumber="+86-888-111-1111",
                     sAddress="tàu",
                     sMoreInfo="nhìn mặt thấy ghét"
@@ -41,7 +41,7 @@ namespace test.Datas
                 new AddressDTO()
                 {
                     iID=4,
-                    sName="Putin",
+                    sName="Gấu AK",
                     sPhoneNumber="+7-111-222-3333",
                     sAddress="Nga",
                     sMoreInfo="Gấu Nga vĩ đại :))"
