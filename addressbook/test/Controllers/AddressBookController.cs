@@ -6,10 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using test.Datas;
 using test.Models;
 using Microsoft.AspNetCore.JsonPatch;
-using Microsoft.AspNetCore.Authorization;
+
 namespace test.Controllers
 {
-    [Authorize]
     [Route("api/addressbook")]
     public class AddressBookController : Controller
     {
