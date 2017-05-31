@@ -31,7 +31,11 @@
           "Microsoft.AspNetCore.StaticFiles": "1.1.2",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           "Microsoft.Extensions.Logging.Debug": "1.1.2",
+=======
+          "Microsoft.Extensions.Logging.Debug": "1.1.1",
+>>>>>>> parent of 3675baa... add new
 =======
           "Microsoft.Extensions.Logging.Debug": "1.1.1",
 >>>>>>> parent of 3675baa... add new
