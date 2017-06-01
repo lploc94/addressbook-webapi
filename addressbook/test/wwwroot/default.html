@@ -3,121 +3,30 @@
 
 <head>
     <meta charset="utf-8" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <title></title>
-</head>
-<body>
-
-=======
-    <title>Address Book</title>
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
     <script>
-        $("document").ready(function ()
-        {
+        $("document").ready(function () {
             var fulldata;
             var length;
-            $.get("http://localhost:63972/api/addressbook", function (data, status)
-            {
+            $.get("http://localhost:63972/api/addressbook", function (data, status) {
                 fulldata = data;
                 length = fulldata.length;
 
-               
-                for (i = 0; i < length; i++)
-                {
-                    var name = "<div id = 'n"+i+"' class = 'flip'>" + fulldata[i].sName+"</div>";
-                    var more = "<div id = 'm" +i+"' class = 'info'>" + fulldata[i].sPhoneNumber + "<br>" + fulldata[i].sAddress + "<br>" + fulldata[i].sMoreInfo + "</div>";
+
+                for (i = 0; i < length; i++) {
+                    var name = "<div id = 'n" + i + "' class = 'flip'>" + fulldata[i].sName + "</div>";
+                    var more = "<div id = 'm" + i + "' class = 'info'>" + fulldata[i].sPhoneNumber + "<br>" + fulldata[i].sAddress + "<br>" + fulldata[i].sMoreInfo + "</div>";
                     $("body").append(name, more);
-                    
+
                 }
             });
-            
-            
-            setTimeout(function ()
-            {
-                
-                $("#n0").click(function () {
 
-                    $("#m0").slideToggle("slow");
-                });
-                $("#n1").click(function () {
 
-                    $("#m1").slideToggle("slow");
-                });
-                $("#n2").click(function () {
+            setTimeout(function () {
 
-                    $("#m2").slideToggle("slow");
-                });
-                $("#n3").click(function () {
-
-                    $("#m3").slideToggle("slow");
-                });
-                $("#n4").click(function () {
-
-                    $("#m4").slideToggle("slow");
-                });
-                $("#n5").click(function () {
-
-                    $("#m5").slideToggle("slow");
-                });        
-  
-            }, 2000);
-            
-            
-
-        });
-
-    </script>
-    <style>
-        .info, .flip {
-            padding: 5px;
-            text-align: center;
-            background-color: #28A9BC;
-            border: solid 1px #FFE7C1;
-        }
-
-        .info {
-            padding: 50px;
-            display: none;
-            background-color: #92DBC7;
-        }
-    </style>
-</head>
-<body>
-    <h1><center>Address Book</center></h1>
->>>>>>> origin/develop
-=======
-    <title>Address Book</title>
-    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
-    <script>
-        $("document").ready(function ()
-        {
-            var fulldata;
-            var length;
-            $.get("http://localhost:63972/api/addressbook", function (data, status)
-            {
-                fulldata = data;
-                length = fulldata.length;
-
-               
-                for (i = 0; i < length; i++)
-                {
-                    var name = "<div id = 'n"+i+"' class = 'flip'>" + fulldata[i].sName+"</div>";
-                    var more = "<div id = 'm" +i+"' class = 'info'>" + fulldata[i].sPhoneNumber + "<br>" + fulldata[i].sAddress + "<br>" + fulldata[i].sMoreInfo + "</div>";
-                    $("body").append(name, more);
-                    
-                }
-            });
-            
-            
-            setTimeout(function ()
-            {
-                
                 $("#n0").click(function () {
 
                     $("#m0").slideToggle("slow");
@@ -142,10 +51,10 @@
 
                     $("#m5").slideToggle("slow");
                 });
-  
+
             }, 1000);
-            
-            
+
+
 
         });
 
@@ -164,86 +73,9 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Address Book</h1>
->>>>>>> parent of 3675baa... add new
-=======
-    <title>Address Book</title>
-    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
-    <script>
-        $("document").ready(function ()
-        {
-            var fulldata;
-            var length;
-            $.get("http://localhost:63972/api/addressbook", function (data, status)
-            {
-                fulldata = data;
-                length = fulldata.length;
 
-               
-                for (i = 0; i < length; i++)
-                {
-                    var name = "<div id = 'n"+i+"' class = 'flip'>" + fulldata[i].sName+"</div>";
-                    var more = "<div id = 'm" +i+"' class = 'info'>" + fulldata[i].sPhoneNumber + "<br>" + fulldata[i].sAddress + "<br>" + fulldata[i].sMoreInfo + "</div>";
-                    $("body").append(name, more);
-                    
-                }
-            });
-            
-            
-            setTimeout(function ()
-            {
-                
-                $("#n0").click(function () {
-
-                    $("#m0").slideToggle("slow");
-                });
-                $("#n1").click(function () {
-
-                    $("#m1").slideToggle("slow");
-                });
-                $("#n2").click(function () {
-
-                    $("#m2").slideToggle("slow");
-                });
-                $("#n3").click(function () {
-
-                    $("#m3").slideToggle("slow");
-                });
-                $("#n4").click(function () {
-
-                    $("#m4").slideToggle("slow");
-                });
-                $("#n5").click(function () {
-
-                    $("#m5").slideToggle("slow");
-                });
-  
-            }, 1000);
-            
-            
-
-        });
-
-    </script>
-    <style>
-        .info, .flip {
-            padding: 5px;
-            text-align: center;
-            background-color: #e5eecc;
-            border: solid 1px #c3c3c3;
-        }
-
-        .info {
-            padding: 50px;
-            display: none;
-        }
-    </style>
-</head>
-<body>
-    <h1>Address Book</h1>
->>>>>>> parent of 3675baa... add new
 </body>
 </html>
